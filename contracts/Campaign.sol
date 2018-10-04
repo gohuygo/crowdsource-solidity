@@ -59,7 +59,7 @@ contract Campaign {
     function finalizeRequest(uint index) public onlyManager{
         Request storage currentRequest = requests[index];
         require(!currentRequest.complete);
-        require(currentRequest.approvalCount > (approversCount/2))
+        require(currentRequest.approvalCount > (approversCount/2));
 
         currentRequest.recipient.transfer(currentRequest.value);
         currentRequest.complete = true;
