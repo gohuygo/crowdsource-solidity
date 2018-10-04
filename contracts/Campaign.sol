@@ -14,6 +14,7 @@ contract Campaign {
     address public manager;
     uint public minimumContribution;
     mapping(address => bool) public approvers;
+    uint public approversCount;
 
     modifier onlyManager() {
        require(msg.sender == manager);
@@ -29,6 +30,7 @@ contract Campaign {
         require(msg.value > minimumContribution);
 
         approvers[msg.sender] = true;
+        approversCount++;
     }
 
     function createRequest(string description, address recipient, uint value)
@@ -52,5 +54,14 @@ contract Campaign {
 
         currentRequest.approvals[msg.sender] = true;
         currentRequest.approvalCount++;
+    }
+
+    function finalizeRequest(uint index) public onlyManager{
+        Request storage currentRequest = requests[index];
+        require(!currentRequest.complete);
+        require(currentRequest.approvalCount > (approversCount/2))
+
+        currentRequest.recipient.transfer(currentRequest.value);
+        currentRequest.complete = true;
     }
 }
