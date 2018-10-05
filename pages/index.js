@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import factory from '../ethereum/factory';
 
 class CampaignIndex extends Component {
-  async componentDidMount() {
+  static async getInitialProps() {
+    // Exclusively used by NextJS
     const campaigns = await factory.methods.getDeployedCampaigns().call()
-
-    console.log(campaigns);
+    return { campaigns };
   }
 
   render(){
     return(
-      <div>CampaignIndex</div>
+      <div>{this.props.campaigns[0]}</div>
     )
   }
 }
