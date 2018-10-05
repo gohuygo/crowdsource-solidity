@@ -3,3 +3,5 @@
 `npm test`
 
 `node ethereum/deploy.js`
+
+`npm run dev`
