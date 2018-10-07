@@ -1,4 +1,3 @@
-// TODO: GET DOTENV TO WORK!!
 require('dotenv').config()
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
