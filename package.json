@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha",
     "dev": "node server.js",
-    "start": "node server.js", // Start script for heroku
-    "heroku-postbuild": "next build" // Build script for herkou
+    "start": "node server.js",
+    "heroku-postbuild": "next build"
   },
   "author": "",
   "license": "ISC",
