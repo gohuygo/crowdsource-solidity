@@ -5,7 +5,7 @@ import { Link } from '../routes';
 export default () => {
   return(
     <Menu>
-      <Link route='/'><a className="item">BitFunding</a></Link>
+      <Link route='/'><a className="item">MyEtherFund</a></Link>
 
       <Menu.Menu position='right'>
         <Link route='/'><a className="item">Campaigns</a></Link>
