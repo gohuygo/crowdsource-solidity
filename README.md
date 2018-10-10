@@ -1,5 +1,6 @@
+Decentralized Kickerstarter Demo
 
-Visit on the test network - https://ethfunding.herokuapp.com/
+Visit on the test network - https://ethfunding.herokuapp.com/. You will need to have the MetaMask plugin installed and connected to the Rinkeby Network.
 
 `node ethereum/compile.js` to create contract builds .
 
