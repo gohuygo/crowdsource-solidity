@@ -1,5 +1,5 @@
 
-Visit on the test network - https://ethfunding.herokuapp.com/
+Visit on the test network - https://myetherfund.herokuapp.com/
 
 `node ethereum/compile.js` to create contract builds .
 
