@@ -1,12 +1,11 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory.json')
-// const env = require('../env-config.js');
 
 
 const provider = new HDWalletProvider(
-  env.MNEMONIC_PHRASE,
-  env.INFURA_API_KEY
+  process.env.MNEMONIC_PHRASE,
+  process.env.INFURA_API_KEY
 );
 
 const web3 = new Web3(provider);
@@ -22,5 +21,6 @@ const deploy = async () => {
 
   console.log("Contract deployed to: ", result.options.address);
 };
+
 deploy();
 

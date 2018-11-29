@@ -1,6 +1,6 @@
 const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  'INFURA_API_KEY':  '',
-  'MNEMONIC_PHRASE': ''
+  'process.env.INFURA_API_KEY':  '',
+  'process.env.MNEMONIC_PHRASE': ''
 }
