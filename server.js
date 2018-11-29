@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const next = require('next')
 const app = next({dev: process.env.NODE_ENV !== 'production'})
 const {createServer} = require('http')

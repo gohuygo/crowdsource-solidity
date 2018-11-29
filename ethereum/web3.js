@@ -1,6 +1,4 @@
 import Web3 from 'web3';
-// import env from '../env-config.js'
-
 let web3;
 let provider;
 if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
